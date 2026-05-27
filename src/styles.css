@@ -1,0 +1,63 @@
+body {
+  /* font-family: Arial, sans-serif; */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(234, 247, 247);
+}
+#canvas {
+  border: 1px solid #ccc;
+  max-width: 100%;
+  height: auto;
+  touch-action: none;
+}
+#controls {
+  margin-top: 15px;
+}
+#clear {
+  background-color: red;
+  color: white;
+  border: none;
+}
+#clear:hover {
+  background-color: white;
+  color: red;
+  border: 1px solid red;
+  cursor: pointer;
+}
+#download {
+  background-color: purple;
+  color: white;
+  border: none;
+}
+#download:hover {
+  background-color: white;
+  color: purple;
+  border: 1px solid purple;
+  cursor: pointer;
+}
+button,
+select {
+  padding: 10px 15px;
+  margin: 5px;
+}
+input[type="file"] {
+  margin-bottom: 15px;
+}
+#status {
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+#undo {
+  background-color: tomato;
+  color: white;
+  border: none;
+}
+#undo:hover {
+  background-color: white;
+  color: tomato;
+  border: 1px solid tomato;
+  cursor: pointer;
+}

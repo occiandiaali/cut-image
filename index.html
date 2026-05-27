@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cut-image</title>
+  </head>
+  <body>
+    <!-- <div id="app"></div> -->
+    <h2>Cut Image</h2>
+    <input type="file" id="upload" accept="image/*" /><br />
+    <canvas id="canvas"></canvas>
+    <div id="controls">
+      <label for="color">Outline Colour</label>
+      <select id="color">
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="green">Green</option>
+        <option value="orange">Orange</option>
+        <option value="purple">Purple</option></select
+      ><br />
+      <button id="undo">Undo Last Highlight</button>
+      <button id="clear">Clear All</button>
+      <button id="download">Download Highlights</button>
+      <div id="status">0 highlights selected</div>
+    </div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
