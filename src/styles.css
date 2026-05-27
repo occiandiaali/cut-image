@@ -1,3 +1,14 @@
+.ad-label {
+  font-size: x-small;
+  margin-top: 8px;
+}
+.ad-leaderboard {
+  margin: 6px auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 body {
   /* font-family: Arial, sans-serif; */
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
