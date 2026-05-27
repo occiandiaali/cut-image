@@ -305,12 +305,16 @@ function moveDraw(e) {
 function endDraw(e) {
   if (!isDrawing) return;
   e.preventDefault();
-  const pos = e.changedTouches
-    ? {
-        x: e.changedTouches[0].clientX - canvas.getBoundingClientRect().left,
-        y: e.changedTouches[0].clientY - canvas.getBoundingClientRect().top,
-      }
-    : getPos(e);
+
+  let pos;
+  if (e.type.startsWith("touch")) {
+    const rect = canvas.getBoundingClientRect();
+    const touch = e.changedTouches[0]; // ✅ correct for touchend
+    pos = { x: touch.clientX - rect.left, y: touch.clientY - rect.top };
+  } else {
+    pos = getPos(e);
+  }
+
   const color = document.getElementById("color").value;
   highlights.push({
     x: startX,
@@ -319,6 +323,7 @@ function endDraw(e) {
     h: pos.y - startY,
     color,
   });
+
   isDrawing = false;
   redrawHighlights();
 }
